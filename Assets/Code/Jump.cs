@@ -24,7 +24,7 @@ public class Jump : MonoBehaviour
             Debug.Log("dadada");
 
 
-            // _jumpAnim.Play();
+            spriteRenderer.sprite = _jumping;
             _rb.velocity = new Vector2(0, 5f);
             _isJumping = true;
             jumpTimes++;
