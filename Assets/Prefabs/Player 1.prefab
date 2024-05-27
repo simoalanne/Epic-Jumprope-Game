@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 340167155583207759}
   - component: {fileID: 2001560213639424718}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,5 +174,5 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1094479721395544850}
   _jumping: {fileID: 21300000, guid: 403ab9750843ead4bbd6d5a7df29bc5a, type: 3}
   _standing: {fileID: 21300000, guid: bccb9d2581623974cba6527bd89a272d, type: 3}
-  _jumpButton: Fire1
+  _jumpButton: Vertical
   jumpTimes: 0
