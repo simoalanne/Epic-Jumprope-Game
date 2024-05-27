@@ -9,6 +9,7 @@ public class Jump : MonoBehaviour
     private bool _isJumping;
     [SerializeField] private Sprite _jumping;
     [SerializeField] private Sprite _standing;
+    [SerializeField] private string _jumpButton;
     // Tama tulosnayttoon
     public int jumpTimes;
     void Start()
@@ -19,7 +20,7 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !_isJumping)
+        if (Input.GetButtonDown(_jumpButton) && !_isJumping)
         {
             Debug.Log("dadada");
 
