@@ -21,7 +21,7 @@ public class Jump : MonoBehaviour
 
 
             // _jumpAnim.Play();
-            _rb.velocity = new Vector2(0, 5f);
+            _rb.velocity = new Vector2(0, 7.5f);
             _isJumping = true;
         }
     }
