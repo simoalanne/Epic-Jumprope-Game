@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    [SerializeField] private Animation _jumpAnim;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private Rigidbody2D _rb;
     private bool _isJumping;
+    [SerializeField] private Sprite _jumping;
+    [SerializeField] private Sprite _standing;
+    // Tama tulosnayttoon
+    public int jumpTimes;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();        
@@ -21,8 +25,9 @@ public class Jump : MonoBehaviour
 
 
             // _jumpAnim.Play();
-            _rb.velocity = new Vector2(0, 7.5f);
+            _rb.velocity = new Vector2(0, 5f);
             _isJumping = true;
+            jumpTimes++;
         }
     }
 
@@ -31,6 +36,7 @@ public class Jump : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             Debug.Log("collided");
+            spriteRenderer.sprite = _standing;
             _isJumping = false;
         }
     }
