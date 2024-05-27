@@ -7,6 +7,8 @@ public class Jump : MonoBehaviour
     [SerializeField] private Animation _jumpAnim;
     private Rigidbody2D _rb;
     private bool _isJumping;
+    // Tama tulosnayttoon
+    public int jumpTimes;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();        
@@ -19,10 +21,10 @@ public class Jump : MonoBehaviour
         {
             Debug.Log("dadada");
 
-
             // _jumpAnim.Play();
             _rb.velocity = new Vector2(0, 5f);
             _isJumping = true;
+            jumpTimes++;
         }
     }
 
