@@ -12,12 +12,12 @@ public class SelectPlayerCount : MonoBehaviour
         if (_slider.value <= 0.5f)
         {
             _text.text = "Players: 1";
-            GameManager.Instance._playerCount = 1;
+            GameManager.Instance.PlayerCount= 1;
         }
         else
         {
             _text.text = "Players: 2";
-            GameManager.Instance._playerCount = 2;
+            GameManager.Instance.PlayerCount = 2;
         }
     }
 }
