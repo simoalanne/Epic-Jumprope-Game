@@ -1398,6 +1398,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275328209}
   m_CullTransparentMesh: 1
+--- !u!1 &1296146772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296146774}
+  - component: {fileID: 1296146773}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1296146773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296146772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e745b2afd1bddea489c54b58e3cdd104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashbangPrefab: {fileID: 0}
+  bubblePrefab: {fileID: 0}
+  doublejumpPrefab: {fileID: 0}
+  speedupPrefab: {fileID: 0}
+  speeddownPrefab: {fileID: 0}
+  spawnRate: 5
+  spawnRadius: 10
+--- !u!4 &1296146774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296146772}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15, y: 15.04, z: 1995.5947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1348676672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,3 +1848,4 @@ SceneRoots:
   - {fileID: 1616971732}
   - {fileID: 1171395155}
   - {fileID: 914706226}
+  - {fileID: 1296146774}
