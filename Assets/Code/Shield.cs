@@ -20,16 +20,11 @@ public class Shield : MonoBehaviour
     IEnumerator FlashShield()
     {
         var shield = transform.GetChild(0).gameObject;
-        var shieldRenderer = shield.GetComponent<SpriteRenderer>();
-        var flashDuration = 0.25f;
-        var flashCount = 1;
-        for (int i = 0; i < flashCount; i++)
-        {
-            shieldRenderer.enabled = false;
-            yield return new WaitForSeconds(flashDuration);
-            shieldRenderer.enabled = true;
-            yield return new WaitForSeconds(flashDuration);
-        }
+        shield.GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.15f);
+        shield.GetComponent<SpriteRenderer>().enabled = true;
+        yield return new WaitForSeconds(0.15f);
+        shield.GetComponent<SpriteRenderer>().enabled = false;
         shield.SetActive(false);
     }
 }
