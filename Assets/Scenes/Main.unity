@@ -407,6 +407,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textMeshPro: {fileID: 261168318}
+--- !u!1 &685518432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685518434}
+  - component: {fileID: 685518433}
+  m_Layer: 0
+  m_Name: DebuffManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &685518433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685518432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102a73779a909e14ab676f58e008f4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashbangPrefab: {fileID: 6251945703885388280, guid: f1c75ed87447c3b41a6641dfe07d7c82, type: 3}
+--- !u!4 &685518434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685518432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.550854, y: 9.322927, z: -0.011733572}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &701362765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,7 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08933800d747ff248ae476c3ad5d576e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ropeSpeed: 0.75
+  _ropeSpeed: 1.3
   ropeCollider: {fileID: 1128709571}
   animator: {fileID: 1128709567}
   _rope: {fileID: 1128709566}
@@ -1427,11 +1472,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e745b2afd1bddea489c54b58e3cdd104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashbangPrefab: {fileID: 0}
-  bubblePrefab: {fileID: 0}
-  doublejumpPrefab: {fileID: 0}
-  speedupPrefab: {fileID: 0}
-  speeddownPrefab: {fileID: 0}
+  flashbangPrefab: {fileID: 2255348041733597619, guid: a684bd2fda32eb6448f1f3290cebe930, type: 3}
+  bubblePrefab: {fileID: 7700449141712899946, guid: 182dd1fea3e57bd429adcf878e998998, type: 3}
+  doublejumpPrefab: {fileID: 8509569781612574441, guid: 8d330dd0576076148be4025fdd140b07, type: 3}
+  speedupPrefab: {fileID: 3575321950684143479, guid: b1178556968c90146b35dcb8e40779e5, type: 3}
+  speeddownPrefab: {fileID: 5623232276955068036, guid: c1c757d497d595548bcf953996805d2b, type: 3}
   spawnRate: 5
   spawnRadius: 10
 --- !u!4 &1296146774
@@ -1849,3 +1894,4 @@ SceneRoots:
   - {fileID: 1171395155}
   - {fileID: 914706226}
   - {fileID: 1296146774}
+  - {fileID: 685518434}
