@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DebuffManager : MonoBehaviour
@@ -8,27 +7,51 @@ public class DebuffManager : MonoBehaviour
 
     public void FlashBang()
     {
-        Instantiate(flashbangPrefab, new Vector3(0,0,0), Quaternion.identity);
+        if (FindObjectOfType<Flashbang>() != null)
+        {
+            return;
+        }
+
+        Instantiate(flashbangPrefab, new Vector3(0, 0, 0), Quaternion.identity);
     }
 
     public void SlowTime()
     {
+        if (Time.timeScale == 0.7f)
+        {
+            return;
+        }
+
         StartCoroutine(ApplySlow());
     }
 
     public void FastTime()
     {
+        if (Time.timeScale == 1.3f)
+        {
+            return;
+        }
+
         StartCoroutine(ApplyFast());
     }
 
     public void Shield()
     {
-
+        if (FindObjectOfType<Shield>().ShieldActive)
+        {
+            return;
+        }
+        FindObjectOfType<Shield>().ActivateShield();
     }
 
     public void DoubleJump()
     {
+        if (FindObjectOfType<Jump>().AllowDoubleJump)
+        {
+            return;
+        }
 
+        FindObjectOfType<Jump>().AllowDoubleJump = true; // Find the Jump script and set the AllowDoubleJump property to true
     }
 
     private IEnumerator ApplySlow()
