@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bccb9d2581623974cba6527bd89a272d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a76fb4b65999214a9cd88875ec3d8f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -174,8 +174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1094479721395544850}
-  _jumping: {fileID: 21300000, guid: 403ab9750843ead4bbd6d5a7df29bc5a, type: 3}
-  _standing: {fileID: 21300000, guid: bccb9d2581623974cba6527bd89a272d, type: 3}
+  _jumping: {fileID: 21300000, guid: 161b41a7cdd817049b285c5259aa6d41, type: 3}
+  _standing: {fileID: 21300000, guid: 5a76fb4b65999214a9cd88875ec3d8f8, type: 3}
   _jumpButton: Fire1
   _maxJumpHeight: 1.5
   _jumpForce: 6

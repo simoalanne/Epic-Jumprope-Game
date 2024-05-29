@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerupSpawner : MonoBehaviour
@@ -16,12 +14,19 @@ public class PowerupSpawner : MonoBehaviour
 
     private float spawnTimer;
 
-    // Update is called once per frame
+    void Awake()
+    {
+        if (GameManager.Instance.PlayerCount == 2)
+        {
+            gameObject.SetActive(false); // Disable powerup spawner if there are two players
+        }
+    }
+
     void Update()
     {
         spawnTimer += Time.deltaTime;
 
-        if(spawnTimer >= spawnRate) 
+        if (spawnTimer >= spawnRate)
         {
             spawnTimer = 0;
             spawnPowerup();

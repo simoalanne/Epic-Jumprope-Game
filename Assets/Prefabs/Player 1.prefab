@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2001560213639424718}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bccb9d2581623974cba6527bd89a272d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80093d068303f36489c4138823a87a59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1094479721395544850}
-  _jumping: {fileID: 21300000, guid: 403ab9750843ead4bbd6d5a7df29bc5a, type: 3}
-  _standing: {fileID: 21300000, guid: bccb9d2581623974cba6527bd89a272d, type: 3}
+  _jumping: {fileID: 21300000, guid: acde03e28a68c404b81b08cb0e0c3307, type: 3}
+  _standing: {fileID: 21300000, guid: 80093d068303f36489c4138823a87a59, type: 3}
   _jumpButton: Vertical
   _maxJumpHeight: 1.5
   _jumpForce: 6

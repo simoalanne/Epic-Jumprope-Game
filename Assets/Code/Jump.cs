@@ -29,7 +29,7 @@ public class Jump : MonoBehaviour
 
 
 
-    void Start()
+    void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = _initialGravityScale;

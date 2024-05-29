@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.WebSockets;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class RopeEvents : MonoBehaviour
@@ -11,15 +7,14 @@ public class RopeEvents : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] GameObject _rope;
 
-    private void Awake()
+    void PlayRopeSound()
     {
-        
+        GetComponent<SoundEffectPlayer>().PlaySoundEffect(0);
     }
 
-    // Update is called once per frame
-    void Update()
+    void StopSoundEffect()
     {
-       
+        GetComponent<SoundEffectPlayer>().StopSoundEffect();
     }
 
     private void DisableCollider()
@@ -34,7 +29,8 @@ public class RopeEvents : MonoBehaviour
 
     private void fastenRope()
     {
-        if (_ropeSpeed < 2.5f) { 
+        if (_ropeSpeed < 2.5f)
+        {
             _ropeSpeed += 0.02f;
             animator.speed = _ropeSpeed;
         }
