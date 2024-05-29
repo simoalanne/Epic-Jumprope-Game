@@ -19,7 +19,7 @@ public class Jump : MonoBehaviour
     private float _startYPosition; // Y position where the jump started in order to calculate the max height
     private int jumpTimes;
     public int JumpTimes => jumpTimes;
-    private bool _allowDoubleJump = true;
+    private bool _allowDoubleJump = false;
     public bool AllowDoubleJump
     {
         get => _allowDoubleJump;
