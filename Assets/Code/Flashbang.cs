@@ -11,6 +11,7 @@ public class Flashbang : MonoBehaviour
 
     public void Start()
     {
+        GetComponent<SoundEffectPlayer>().PlaySoundEffect(0);
         _flashImage = GetComponentInChildren<RawImage>();
         _flashImage.color = new Color(1, 1, 1, _alphaValue);
         StartCoroutine(FlashAnim());
