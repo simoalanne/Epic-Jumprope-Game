@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Slow
+  - Flash
+  - Shield
+  - Fast
+  - DoubleJump
   layers:
   - Default
   - TransparentFX
