@@ -19,6 +19,15 @@ public class Jump : MonoBehaviour
     private float _startYPosition; // Y position where the jump started in order to calculate the max height
     private int jumpTimes;
     public int JumpTimes => jumpTimes;
+    private bool _allowDoubleJump = true;
+    public bool AllowDoubleJump
+    {
+        get => _allowDoubleJump;
+        set => _allowDoubleJump = value;
+    }
+    private int _concurrentJumpcount = 0;
+
+
 
     void Start()
     {
@@ -28,13 +37,20 @@ public class Jump : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown(_jumpButton) && !_isJumping)
+        if (Input.GetButtonDown(_jumpButton) && (!_isJumping || (_allowDoubleJump && _concurrentJumpcount < 2)))
         {
             spriteRenderer.sprite = _jumping;
             _isJumping = true;
             _jumpButtonHeld = true;
             _startYPosition = transform.position.y;
             jumpTimes++;
+            _concurrentJumpcount++;
+            if (_concurrentJumpcount == 2)
+            {
+                _allowDoubleJump = false;
+            }
+
+            
         }
 
         // Apply jump force while the button is held down and max height is not reached
@@ -74,6 +90,7 @@ public class Jump : MonoBehaviour
         {
             spriteRenderer.sprite = _standing;
             _isJumping = false;
+            _concurrentJumpcount = 0;
             _rb.gravityScale = _initialGravityScale;
         }
     }
