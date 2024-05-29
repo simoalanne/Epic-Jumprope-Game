@@ -8,13 +8,13 @@ public class SpawnPlayers : MonoBehaviour
     {
         if (GameManager.Instance.PlayerCount > 1)
         {
-            Instantiate(_playerPrefab, new Vector2(-1.1f, -2.5f), Quaternion.identity);
-            Instantiate(_playerPrefab2, new Vector2(1.1f, -2.5f), Quaternion.identity);
+            Instantiate(_playerPrefab, new Vector2(-1.1f, -0.56f), Quaternion.identity);
+            Instantiate(_playerPrefab2, new Vector2(1.1f, -0.56f), Quaternion.identity);
         }
 
         else
         {
-            Instantiate(_playerPrefab, new Vector2(0, -2.5f), Quaternion.identity);
+            Instantiate(_playerPrefab, new Vector2(0, -0.56f), Quaternion.identity);
         }
     }
 }
