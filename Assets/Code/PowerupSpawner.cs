@@ -24,7 +24,7 @@ public class PowerupSpawner : MonoBehaviour
         if(spawnTimer >= spawnRate) 
         {
             spawnTimer = 0;
-            // spawnPowerup();
+            spawnPowerup();
         }
     }
 
