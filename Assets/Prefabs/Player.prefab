@@ -158,7 +158,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!114 &2001560213639424718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,4 +175,7 @@ MonoBehaviour:
   _jumping: {fileID: 21300000, guid: 403ab9750843ead4bbd6d5a7df29bc5a, type: 3}
   _standing: {fileID: 21300000, guid: bccb9d2581623974cba6527bd89a272d, type: 3}
   _jumpButton: Fire1
-  jumpTimes: 0
+  _maxJumpHeight: 1.5
+  _jumpForce: 6
+  _initialGravityScale: 1.33
+  _fallGravityScale: 2.5
