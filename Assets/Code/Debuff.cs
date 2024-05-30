@@ -15,7 +15,7 @@ public class Debuff : MonoBehaviour
 
     private void OnMouseDown()
     {
-        switch(_prefabTag)
+        switch (_prefabTag)
         {
             case "Slow":
                 debuffManager.GetComponent<DebuffManager>().SlowTime();

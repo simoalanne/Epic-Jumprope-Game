@@ -17,6 +17,7 @@ public class DebuffManager : MonoBehaviour
 
     public void SlowTime()
     {
+        GetComponent<SoundEffectPlayer>().PlaySoundEffect(0);
         if (Time.timeScale == 0.7f)
         {
             return;
@@ -27,6 +28,7 @@ public class DebuffManager : MonoBehaviour
 
     public void FastTime()
     {
+        GetComponent<SoundEffectPlayer>().PlaySoundEffect(0);
         if (Time.timeScale == 1.3f)
         {
             return;
@@ -37,6 +39,7 @@ public class DebuffManager : MonoBehaviour
 
     public void Shield()
     {
+        GetComponent<SoundEffectPlayer>().PlaySoundEffect(0);
         if (FindObjectOfType<Shield>().ShieldActive)
         {
             return;
@@ -46,6 +49,7 @@ public class DebuffManager : MonoBehaviour
 
     public void DoubleJump()
     {
+        GetComponent<SoundEffectPlayer>().PlaySoundEffect(0);
         if (FindObjectOfType<Jump>().AllowDoubleJump)
         {
             return;
