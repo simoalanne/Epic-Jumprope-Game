@@ -6,28 +6,48 @@ public class RopeCollisionCheck : MonoBehaviour
     [SerializeField] private GameObject _targetRope;
     [SerializeField] private GameObject _endMenu;
     [SerializeField] private GameObject _deathSoundPlayer;
-    [SerializeField] private TMP_Text _textMeshPro;
+    [SerializeField] private TMP_Text _playerWinsText;
+    [SerializeField] private TMP_Text[] _highScoreTexts;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Jump[] jumps = FindObjectsOfType<Jump>();
+        int highestJump = 0;
+
+        foreach (Jump jump in jumps)
+        {
+            if (jump.JumpTimes > highestJump)
+            {
+                highestJump = jump.JumpTimes;
+            }
+        }
+        int getScore = highestJump;
+        FindObjectOfType<HighScoreManager>().CheckForHighScore(getScore);
+
+        for (int i = 0; i < FindObjectOfType<HighScoreManager>().HighScores.Count; i++)
+        {
+            _highScoreTexts[i].text = i + 1 + ". " + FindObjectOfType<HighScoreManager>().HighScores[i].ToString();
+        }
+
         if (GameManager.Instance.PlayerCount == 2)
         {
             if (collision.gameObject.CompareTag("Player2"))
             {
                 Destroy(collision.gameObject);
-                _textMeshPro.text = "Player 2 wins!";
+                _playerWinsText.text = "Player 1 wins!";
                 _endMenu.SetActive(true);
                 Destroy(_targetRope);
-                return;
-
+                _deathSoundPlayer.GetComponent<SoundEffectPlayer>().PlaySoundEffect(0);
             }
             else if (collision.gameObject.CompareTag("Player"))
             {
                 Destroy(collision.gameObject);
-                _textMeshPro.text = "Player 1 wins!";
+                _playerWinsText.text = "Player 2 wins!";
                 _endMenu.SetActive(true);
                 Destroy(_targetRope);
-                return;
+                _deathSoundPlayer.GetComponent<SoundEffectPlayer>().PlaySoundEffect(0);
             }
+            FindObjectOfType<DisplayScore>().displayScore(getScore);
+            return;
         }
 
         if (collision.gameObject.CompareTag("Player"))
@@ -35,15 +55,13 @@ public class RopeCollisionCheck : MonoBehaviour
             if (FindObjectOfType<Shield>().ShieldActive)
             {
                 FindObjectOfType<Shield>().DeactivateShield();
+                GetComponent<SoundEffectPlayer>().PlaySoundEffect(1);
                 return;
             }
             _deathSoundPlayer.GetComponent<SoundEffectPlayer>().PlaySoundEffect(0);
-            Debug.Log("Player collided with rope");
             _endMenu.SetActive(true);
-
-            Destroy(_targetRope);
-            int getScore = FindObjectOfType<Jump>().JumpTimes;
             FindObjectOfType<DisplayScore>().displayScore(getScore);
+            Destroy(_targetRope);
         }
     }
 }
