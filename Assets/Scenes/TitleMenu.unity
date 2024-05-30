@@ -856,6 +856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 168424168}
   - component: {fileID: 168424167}
+  - component: {fileID: 168424169}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -890,6 +891,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &168424169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168424166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bc07f32bdedb14fa6511aed1956373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundEffect:
+  - {fileID: 8300000, guid: f20b287837a64ac4b95f07b83d54d3d6, type: 3}
+  _loopSound: 0
+  _volumeFromZeroToOne: 1
 --- !u!1 &235291835
 GameObject:
   m_ObjectHideFlags: 0

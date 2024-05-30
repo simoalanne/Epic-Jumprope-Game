@@ -55,6 +55,7 @@ public class RopeCollisionCheck : MonoBehaviour
             if (FindObjectOfType<Shield>().ShieldActive)
             {
                 FindObjectOfType<Shield>().DeactivateShield();
+                GetComponent<SoundEffectPlayer>().PlaySoundEffect(1);
                 return;
             }
             _deathSoundPlayer.GetComponent<SoundEffectPlayer>().PlaySoundEffect(0);
